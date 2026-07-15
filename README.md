@@ -1,0 +1,1 @@
+Resolução de Case Técnico para a posição de Support Intern (Remote) na empresa Dadosfera.
