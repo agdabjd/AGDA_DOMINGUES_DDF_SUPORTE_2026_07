@@ -26,6 +26,8 @@ Durante o desenvolvimento foram realizadas a preparação do ambiente em máquin
 | Banco de dados | MySQL Server |
 | Cliente SSH | WinSCP |
 | Controle de versão | Git/Github |
+| Editor de texto | Vim |
+| Ferramentas de rede | net-tools|
 
 ---
 ## Estrutura do repositório
