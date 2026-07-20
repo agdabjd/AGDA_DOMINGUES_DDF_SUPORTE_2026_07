@@ -26,13 +26,13 @@ O projeto foi organizado em diretórios independentes para cada etapa do case.
 
 ```
 .
-├── Step1_Troubleshooting
-├── Step2_Criacao_Banco_De_Dados
-├── Step3_Configuracao_OpenVPN
-├── Step4_Conexao_Dadosfera
-├── Step5_Catalogo_De_Dados
-├── Step6_Consultas_SQL
-└── Step7_Suporte_Hibrido_Presencial
+├── Step 1 - Troubleshooting
+├── Step 2 - Criacao bd
+├── Step 3 - Configuracao VPN
+├── Step 4 - Conexao com Dadosfera
+├── Step 5 - Catalogo de dados
+├── Step6 - Consultas - SQL
+└── Step7 - Suporte hibrido ou presencial
 ```
 
 Cada pasta contém um arquivo markdown descrevendo detalhadamente a execução da etapa correspondente, além das evidências utilizadas (prints de tela, comandos executados, consultas SQL e demais arquivos produzidos).
