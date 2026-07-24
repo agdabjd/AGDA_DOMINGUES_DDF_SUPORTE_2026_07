@@ -101,6 +101,8 @@ AGDA_DOMINGUES_DDF_SUPORTE_2026_07/
 └── README.md
 ```
 
+As pastas nomeadas com "Step" possuem todas um arquivo markdown com o passo a passo do que foi realizado e os prints de comprovação.
+
 O diretório `Tentativa de realizar os steps 2 3 4 5 6 e 7 em servidor local` preserva a documentação da primeira implementação. Esses arquivos registram a configuração realizada no VirtualBox e as evidências que levaram à decisão de migrar o ambiente para a AWS.
 
 Os arquivos sensíveis, como a chave SSH `.pem`, o perfil `.ovpn`, senhas e credenciais, foram mantidos fora do diretório versionado. Endereços IP, identificadores da conta AWS e outras informações sensíveis também foram ocultados nas evidências publicadas.
