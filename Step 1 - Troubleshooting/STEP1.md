@@ -1,24 +1,20 @@
-# Step 1 - Troubleshooting
+# Step 1 – Troubleshooting
 
-Este passo consiste em simular o atendimento a um cliente que reportou uma falha na importação de um Google Sheets para a plataforma Dadosfera. O objetivo é analisar o dataset fornecido, identificar possíveis causas para o erro e responder ao chamado de forma técnica e cordial.
+Esse passo se trata da resolução de um chamado criado pois o usuário reportou um erro na importação dos dados da Dadosfera.
 
-## Resposta
-Olá!
+## Resposta ao chamado
 
-Obrigado por entrar em contato. Analisei o dataset informado e identifiquei um possível ponto que pode estar causando a falha na importação.
+Bom dia, prezado.
 
-Na aba employee, existe uma coluna adicional sem cabeçalho e sem conteúdo. Embora não seja possível afirmar que essa seja a causa exata sem consultar os logs da execução da pipeline, colunas sem nome podem causar inconsistências durante a inferência do esquema dos dados. Recomendo remover essa coluna e executar uma nova tentativa de importação.
+Analisei a planilha utilizada na pipeline e identifiquei duas inconsistências na aba performanceRating. Na coluna EmployeeNumber, há uma célula com o erro #NAME?. Também existe o texto NULL na coluna PerformanceRating do funcionário 274, que deve ser substituído por uma célula vazia caso a avaliação não esteja disponível.
 
-Além dessa correção, algumas boas práticas ao importar dados do Google Sheets para a Dadosfera são:
-- Garantir que todas as colunas possuam um nome válido e único;
-- Evitar linhas ou colunas vazias dentro da área de dados;
-- Manter um único tipo de dado por coluna (texto, número, data etc.);
-- Revisar se os tipos de dados utilizados são compatíveis com os tipos suportados pelo banco de destino;
-- Validar se não existem caracteres especiais ou espaços desnecessários nos nomes das colunas.
+Recomendo corrigir esses dois valores e validar se EmployeeNumber contém apenas números e se PerformanceRating possui somente valores numéricos ou células vazias. A mistura de erros de fórmula, textos e números na mesma coluna pode impedir a identificação correta do tipo de dado durante a importação.
 
-Para confirmar a causa exata da falha, também é recomendado consultar os logs da execução da pipeline, conforme orientado na documentação da Dadosfera. Os logs permitem identificar em qual etapa da importação ocorreu o erro e qual campo ou registro ocasionou a falha.
+Para consultar os detalhes da execução, acesse a pipeline na Dadosfera, abra o área de status, selecione a execução com falha, clique na opção de "actions" e utilize a opção de download dos logs.
 
-Caso o problema persista após esses ajustes, permanecemos à disposição para continuar a investigação.
+Ao carregar dados do Google Sheets, também é importante manter uma única linha de cabeçalho, evitar células mescladas e linhas vazias no meio da tabela, utilizar nomes de colunas únicos e sem aspas duplas, manter um único tipo de dado por coluna e corrigir erros como #NAME?, #REF! e #VALUE!.
 
-At.te, Agda Beatriz Jedliczka Domingues  
-Analista de Suporte
+Após realizar as correções, salve a planilha e execute novamente a sincronização da pipeline. Caso o erro continue, encaminhe os logs da nova execução para que possamos prosseguir com a investigação.
+
+At.te., Agda Beatriz Jedliczka Domingues
+Suporte Técnico
